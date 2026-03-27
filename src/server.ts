@@ -1,7 +1,8 @@
 import Fastify from 'fastify'
+import {env} from './config/env.js'
 
 const app = Fastify({logger:true})
 
-app.listen({port:3333}).then(()=>{
+app.listen({port:env.PORT}).then(()=>{
     console.log('Server is running')
 })
